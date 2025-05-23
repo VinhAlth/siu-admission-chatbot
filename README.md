@@ -1,11 +1,6 @@
-Dưới đây là một **README chuyên nghiệp hoàn chỉnh** cho dự án Chatbot Tuyển sinh SIU. Bạn chỉ cần **copy toàn bộ một lần**, không cần chỉnh sửa thêm nếu không muốn. Văn phong phù hợp cho các dự án AI nghiên cứu hoặc triển khai thực tế tại trường.
-
----
-
-````markdown
 # 🎓 SIU Admission Chatbot
 
-A smart, AI-powered admission chatbot designed to assist prospective students of **Saigon International University (SIU)**. Powered by **Google Gemini Flash 2.0 API**, the system leverages **function calling**, **structured Markdown knowledge base**, and **Gradio UI** for seamless, scalable, and accurate information retrieval.
+An intelligent AI-driven chatbot built to support prospective students of Saigon International University (SIU). Utilizing the Google Gemini Flash 2.0 API, it employs function calling, a hierarchically structured Markdown knowledge base, and a Gradio-powered interface to deliver fast, accurate, and scalable admissions support.
 
 ---
 
@@ -19,9 +14,9 @@ A smart, AI-powered admission chatbot designed to assist prospective students of
 
 ---
 
-## 📸 UI Preview
+## UI Preview
 
-![Chatbot Demo UI](path/to/your/screenshot.png)
+![Chatbot Demo](demo.gif)
 
 Built using [Gradio](https://www.gradio.app/), allowing users to interact with the chatbot in a clean and intuitive interface.
 
@@ -42,11 +37,11 @@ pip install -r requirements.txt
 
 ---
 
-## 📂 Knowledge Base Structure
+## Knowledge Base Structure
 
-The knowledge base is stored as a **tree-structured folder hierarchy** in Markdown format (`.md`). The chatbot searches top-down, starting from broad categories down to specific subfolders, until it locates the file that contains the relevant information.
+The knowledge base is pre-structured as a tree-structured folder hierarchy using Markdown files (.md). The chatbot performs a top-down search, beginning from broad categories and descending into increasingly specific subfolders until it finds a file containing relevant content to answer the user's query.
 
-Each `.md` file is editable by non-technical staff, making it ideal for maintaining up-to-date answers without modifying code.
+This predefined structure allows the system to locate information accurately and systematically. Below is an example of the folder hierarchy for admissions-related content:
 
 ### Example: `content/` Directory
 
@@ -88,11 +83,11 @@ Each `.md` file is editable by non-technical staff, making it ideal for maintain
 ├── 📄 chatbot-faq.md
 ```
 
-> ✨ Tip: Just add more folders or `.md` files and the chatbot will pick them up automatically. No code changes needed.
+> Tip: Just add more folders or `.md` files and the chatbot will pick them up automatically. No code changes needed.
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 1. User submits a query in Vietnamese.
 2. Gemini Flash 2.0 interprets the intent using natural language understanding.
@@ -118,11 +113,11 @@ This project was built to:
 
 ```
 📁 project-root/
-├── 📁 content/                  # Markdown knowledge base
+├── 📁 data/                  # Markdown knowledge base
 ├── 📄 main.py                  # Entry point for the chatbot
 ├── 📄 content_loader.py        # Loads and parses Markdown folders
 ├── 📄 file_searcher.py         # Recursive search logic
-├── 📄 gradio_ui.py             # Gradio-based web UI
+├── 📄 UI.py             # Gradio-based web UI
 ├── 📄 requirements.txt
 └── 📄 README.md
 ```
@@ -149,29 +144,6 @@ The system will automatically determine the intent, locate the relevant Markdown
 
 ---
 
-## 🙏 Acknowledgements
 
-This project is developed by the AI team of **Saigon International University (SIU)** for the 2025 enrollment season.
 
-Powered by:
 
-* Google Gemini Flash 2.0 API
-* Gradio UI Framework
-* Python 3.10
-* Markdown for data transparency
-
----
-
-## 📫 Contact
-
-For questions, feedback, or collaborations, please contact the development team at:
-📧 `ai.lab@siu.edu.vn`
-
----
-
-```
-
----
-
-Nếu bạn cần, mình có thể tạo sẵn luôn các file `main.py`, `content_loader.py`, `file_searcher.py`, và `gradio_ui.py` để chạy ngay. Bạn chỉ cần nói: **"tạo code luôn nhé!"**.
-```
