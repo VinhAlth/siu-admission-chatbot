@@ -16,7 +16,7 @@ An intelligent AI-driven chatbot built to support prospective students of Saigon
 
 ## UI Preview
 
-![Chatbot Demo](demo.gif)
+![Chatbot Demo](video.gif)
 
 Built using [Gradio](https://www.gradio.app/), allowing users to interact with the chatbot in a clean and intuitive interface.
 
@@ -112,14 +112,16 @@ This project was built to:
 ## 🧩 File Structure
 
 ```
-📁 project-root/
-├── 📁 data/                  # Markdown knowledge base
-├── 📄 main.py                  # Entry point for the chatbot
-├── 📄 content_loader.py        # Loads and parses Markdown folders
-├── 📄 file_searcher.py         # Recursive search logic
-├── 📄 UI.py             # Gradio-based web UI
-├── 📄 requirements.txt
-└── 📄 README.md
+📁 siu-admission-chatbot/
+├── 📁 data/                  # Markdown-based knowledge base (structured by topics)
+├── 📄 main.py               # Entry point for chatbot inference and coordination
+├── 📄 UI.py                 # Gradio-based user interface for web interaction
+├── 📄 file_searcher.py      # Handles traversal and lookup across folder hierarchy
+├── 📄 search.py             # Uses Gemini LLM to match user intent with content
+├── 📄 decomposer1.py        # Decomposes complex questions into sub-queries
+├── 📄 requirements.txt      # List of Python dependencies
+├── 📄 README.md             # Project documentation and setup instructions
+└── 📄 test.ipynb            # Notebook to test and debug sample queries
 ```
 
 ---
